@@ -28,10 +28,10 @@ def get_x_ys(exp_type, max_gpus):
                 x = '{} B'.format(data_size)
                 if data_size > 10 ** 3 and data_size < 10 ** 6:
                     data_size_readable = data_size / 1024
-                    x = '{} KB'.format(int(data_size_readable))
+                    x = '{} KB'.format(float(data_size_readable))
                 elif data_size > 10 ** 6:
                     data_size_readable = data_size / 1024 / 1024
-                    x = '{} MB'.format(int(data_size_readable))
+                    x = '{} MB'.format(float(data_size_readable))
                 x_series.append(x)
                 y_series.append(out_bw)
         xs.append(x_series)
@@ -61,7 +61,7 @@ for i in range(len(xs)):
     # Generate a random linestyle from the list
     linestyle = 'solid'
     # Plot the line with the color and linestyle and label it with i
-    ax.plot(xs[i], ys[i], color=color, linestyle=linestyle, label=labels[i])
+    ax.plot(xs[i], ys[i], color=color, linestyle=linestyle, label=labels[i], lw=3)
 
 # Add a legend and put it outside the plot
 ax.legend(loc='upper center', bbox_to_anchor=(0.5, 1.2), ncol=5)
