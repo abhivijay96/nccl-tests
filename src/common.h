@@ -92,7 +92,7 @@ struct testColl {
       ncclRedOp_t op, int root, int rep, int in_place);
   void (*getBw)(size_t count, int typesize, double sec, double* algBw, double* busBw, int nranks);
   testResult_t (*runColl)(void* sendbuff, void* recvbuff, size_t count, ncclDataType_t type,
-      ncclRedOp_t op, int root, ncclComm_t comm, cudaStream_t stream);
+      ncclRedOp_t op, int root, ncclComm_t* comm, cudaStream_t stream);
 };
 extern struct testColl allReduceTest;
 extern struct testColl allGatherTest;
@@ -277,6 +277,32 @@ static int ncclstringtoop (char *str) {
     }
     printf("invalid op %s, defaulting to %s .. \n", str, test_opnames[ncclSum]);
     return ncclSum;
+}
+
+#define MAX_GPUS 128
+
+static int parsecsvints (char* str, int* destination) {
+  int size = 0;
+  char *p = str;
+  int n;
+
+  while (*p != '\0') {
+      // Convert the substring to an int using strtol
+      n = (int)strtol(p, &p, 10);
+      
+      // Add the int to the array if it is not full
+      if (size < MAX_GPUS) {
+          destination[size] = n;
+          size++;
+      }
+      
+      // Skip the comma delimiter
+      if (*p == ',') {
+          p++;
+      }
+  }
+
+  return size;
 }
 
 extern int is_main_proc;

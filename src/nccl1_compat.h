@@ -20,7 +20,7 @@ static ncclResult_t ncclGroupEnd() { return ncclSuccess; }
 #define CHECKCOUNT(count) if (count > INT_MAX) return ncclInvalidArgument;
 
 static ncclResult_t ncclReduce(const void* sendbuff, void* recvbuff, size_t count, ncclDataType_t datatype,
-    ncclRedOp_t op, int root, ncclComm_t comm, cudaStream_t stream) {
+    ncclRedOp_t op, int root, ncclComm_t*  comm_ptr, cudaStream_t stream) {
   CHECKCOUNT(count);
   return ncclReduce(sendbuff, recvbuff, (int)count, datatype, op, root, comm, stream);
 }

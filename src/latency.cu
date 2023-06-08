@@ -7,7 +7,7 @@
 #include "cuda_runtime.h"
 #include "common.h"
 
-void SendRecvGetCollByteCount(size_t *sendcount, size_t *recvcount, size_t *paramcount, size_t *sendInplaceOffset, size_t *recvInplaceOffset, size_t count, int nranks) {
+void latencyGetCollByteCount(size_t *sendcount, size_t *recvcount, size_t *paramcount, size_t *sendInplaceOffset, size_t *recvInplaceOffset, size_t count, int nranks) {
   *sendcount = count;
   *recvcount = count;
   *sendInplaceOffset = 0;
@@ -15,7 +15,7 @@ void SendRecvGetCollByteCount(size_t *sendcount, size_t *recvcount, size_t *para
   *paramcount = *sendcount;
 }
 
-testResult_t SendRecvInitData(struct threadArgs* args, ncclDataType_t type, ncclRedOp_t op, int root, int rep, int in_place) {
+testResult_t latencyInitData(struct threadArgs* args, ncclDataType_t type, ncclRedOp_t op, int root, int rep, int in_place) {
   size_t sendcount = args->sendBytes / wordSize(type);
   size_t recvcount = args->expectedBytes / wordSize(type);
   int nranks = args->nProcs*args->nThreads*args->nGpus;
@@ -30,12 +30,12 @@ testResult_t SendRecvInitData(struct threadArgs* args, ncclDataType_t type, nccl
     TESTCHECK(InitData(args->expected[i], recvcount, peer*recvcount, type, ncclSum, rep, 1, 0));
     CUDACHECK(cudaDeviceSynchronize());
   }
-  // We don't support in-place sendrecv
+  // We don't support in-place latency
   args->reportErrors = in_place ? 0 : 1;
   return testSuccess;
 }
 
-void SendRecvGetBw(size_t count, int typesize, double sec, double* algBw, double* busBw, int nranks) {
+void latencyGetBw(size_t count, int typesize, double sec, double* algBw, double* busBw, int nranks) {
   double baseBw = (double)(count * typesize) / 1.0E9 / sec;
 
   *algBw = baseBw;
@@ -43,43 +43,48 @@ void SendRecvGetBw(size_t count, int typesize, double sec, double* algBw, double
   *busBw = baseBw * factor;
 }
 
-testResult_t SendRecvRunColl(void* sendbuff, void* recvbuff, size_t count, ncclDataType_t type, ncclRedOp_t op, int root, ncclComm_t*  comm_ptr, cudaStream_t stream) {
+testResult_t latencyRunColl(void* sendbuff, void* recvbuff, size_t count, ncclDataType_t type, ncclRedOp_t op, int root, ncclComm_t*  comm_ptr, cudaStream_t stream) {
   ncclComm_t comm = *comm_ptr;
   int nRanks;
   NCCLCHECK(ncclCommCount(comm, &nRanks));
   int rank;
   NCCLCHECK(ncclCommUserRank(comm, &rank));
-  int peer;
-  int halfRanks = nRanks / 2;
-  if(rank >= halfRanks) {
-    peer = rank - halfRanks;
-  }
-  else {
-    peer = rank + halfRanks;
+  
+  if(nRanks != 2) {
+    printf("Invalid usage of latency script, only two GPUs can be passed, L is sender, R is receiver.\n");
+    return testInternalError;
   }
 
+  int senderRank = 0;
+  int receiverRank = 1;
+
   NCCLCHECK(ncclGroupStart());
-  NCCLCHECK(ncclSend(sendbuff, count, type, peer, comm, stream));
-  NCCLCHECK(ncclRecv(recvbuff, count, type, peer, comm, stream));
+  if(rank == senderRank) {
+    NCCLCHECK(ncclSend(sendbuff, count, type, receiverRank, comm, stream));
+  }
+  if(rank == receiverRank) {
+    NCCLCHECK(ncclRecv(recvbuff, count, type, senderRank, comm, stream));
+  }
   NCCLCHECK(ncclGroupEnd());
+  
   return testSuccess;
 }
 
-struct testColl sendRecvTest = {
-  "SendRecv",
-  SendRecvGetCollByteCount,
-  SendRecvInitData,
-  SendRecvGetBw,
-  SendRecvRunColl
+struct testColl latencyTest = {
+  "latency",
+  latencyGetCollByteCount,
+  latencyInitData,
+  latencyGetBw,
+  latencyRunColl
 };
 
-void SendRecvGetBuffSize(size_t *sendcount, size_t *recvcount, size_t count, int nranks) {
+void latencyGetBuffSize(size_t *sendcount, size_t *recvcount, size_t count, int nranks) {
   size_t paramcount, sendInplaceOffset, recvInplaceOffset;
-  SendRecvGetCollByteCount(sendcount, recvcount, &paramcount, &sendInplaceOffset, &recvInplaceOffset, count, nranks);
+  latencyGetCollByteCount(sendcount, recvcount, &paramcount, &sendInplaceOffset, &recvInplaceOffset, count, nranks);
 }
 
-testResult_t SendRecvRunTest(struct threadArgs* args, int root, ncclDataType_t type, const char* typeName, ncclRedOp_t op, const char* opName) {
-  args->collTest = &sendRecvTest;
+testResult_t latencyRunTest(struct threadArgs* args, int root, ncclDataType_t type, const char* typeName, ncclRedOp_t op, const char* opName) {
+  args->collTest = &latencyTest;
   ncclDataType_t *run_types;
   ncclRedOp_t *run_ops;
   const char **run_typenames, **run_opnames;
@@ -113,9 +118,9 @@ testResult_t SendRecvRunTest(struct threadArgs* args, int root, ncclDataType_t t
   return testSuccess;
 }
 
-struct testEngine sendRecvEngine = {
-  SendRecvGetBuffSize,
-  SendRecvRunTest
+struct testEngine latencyEngine = {
+  latencyGetBuffSize,
+  latencyRunTest
 };
 
-#pragma weak ncclTestEngine=sendRecvEngine
+#pragma weak ncclTestEngine=latencyEngine

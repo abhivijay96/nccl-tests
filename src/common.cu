@@ -80,6 +80,11 @@ static int cudaGraphLaunches = 0;
 static int report_cputime = 0;
 // Report average iteration time: (0=RANK0,1=AVG,2=MIN,3=MAX)
 static int average = 1;
+// Kaliedoscope tests
+static int lhs[MAX_GPUS];
+static int rhs[MAX_GPUS];
+static int num_lhs = 0;
+static int num_rhs = 0;
 
 #define NUM_BLOCKS 32
 
@@ -377,7 +382,7 @@ testResult_t startColl(struct threadArgs* args, ncclDataType_t type, ncclRedOp_t
     TESTCHECK(args->collTest->runColl(
           (void*)(in_place ? recvBuff + args->sendInplaceOffset*rank : sendBuff),
           (void*)(in_place ? recvBuff + args->recvInplaceOffset*rank : recvBuff),
-        count, type, op, root, args->comms[i], args->streams[i]));
+        count, type, op, root, args->comms + i, args->streams[i]));
 
     #if NCCL_VERSION_CODE >= NCCL_VERSION(2,11,0)
     if(opIndex >= ncclNumOps) {
@@ -597,10 +602,13 @@ testResult_t TimeTest(struct threadArgs* args, ncclDataType_t type, const char* 
       setupArgs(size, type, args);
       char rootName[100];
       sprintf(rootName, "%6i", root);
-      PRINT("%12li  %12li  %8s  %6s  %6s", max(args->sendBytes, args->expectedBytes), args->nbytes / wordSize(type), typeName, opName, rootName);
-      TESTCHECK(BenchTime(args, type, op, root, 0));
-      TESTCHECK(BenchTime(args, type, op, root, 1));
-      PRINT("\n");
+      
+      for(int repeat = 0; repeat < 5; ++repeat) {
+        PRINT("[STAT]:%5li  %12li  %8s  %6s  %6s", max(args->sendBytes, args->expectedBytes), args->nbytes / wordSize(type), typeName, opName, rootName);
+        TESTCHECK(BenchTime(args, type, op, root, 0));
+        TESTCHECK(BenchTime(args, type, op, root, 1));
+        PRINT("\n");
+      }
   }
   return testSuccess;
 }
@@ -705,13 +713,15 @@ int main(int argc, char* argv[]) {
     {"cudagraph", required_argument, 0, 'G'},
     {"report_cputime", required_argument, 0, 'C'},
     {"average", required_argument, 0, 'a'},
+    {"lhs", no_argument, 0, 'L'},
+    {"rhs", no_argument, 0, 'R'},
     {"help", no_argument, 0, 'h'},
     {}
   };
 
   while(1) {
     int c;
-    c = getopt_long(argc, argv, "t:g:b:e:i:f:n:m:w:p:c:o:d:r:z:y:T:hG:C:a:", longopts, &longindex);
+    c = getopt_long(argc, argv, "t:g:b:e:i:f:n:m:w:p:c:o:d:r:z:y:T:hG:C:a:L:R:", longopts, &longindex);
 
     if (c == -1)
       break;
@@ -795,6 +805,16 @@ int main(int argc, char* argv[]) {
       case 'a':
         average = (int)strtol(optarg, NULL, 0);
         break;
+      case 'L':
+        printf("Parsing LHS %s\n", optarg);
+        num_lhs = parsecsvints(optarg, lhs);
+        printf("NUM LHS %d\n", num_lhs);
+        break;
+      case 'R':
+        printf("Parsing RHS %s\n", optarg);
+        num_rhs = parsecsvints(optarg, rhs);
+        printf("NUM RHS %d\n", num_rhs);
+        break;
       case 'h':
       default:
         if (c != 'h') printf("invalid option '%c'\n", c);
@@ -839,6 +859,10 @@ int main(int argc, char* argv[]) {
 #ifdef MPI_SUPPORT
   MPI_Init(&argc, &argv);
 #endif
+  if(num_lhs != num_rhs) {
+    printf("Error: LHS and RHS have different number of GPUs -- %d, %d\n", num_lhs, num_rhs);
+    return 0;
+  }
   TESTCHECK(run());
   return 0;
 }
@@ -935,7 +959,19 @@ testResult_t run() {
   envstr = getenv("NCCL_TESTS_DEVICE");
   gpu0 = envstr ? atoi(envstr) : -1;
   for (int i=0; i<nGpus*nThreads; i++) {
-    gpus[i] = (gpu0 != -1 ? gpu0 : localRank*nThreads*nGpus) + i;
+    if (num_lhs == 0) {
+      gpus[i] = (gpu0 != -1 ? gpu0 : localRank*nThreads*nGpus) + i;
+    }
+    else {
+      int total_gpus = num_lhs + num_rhs;
+      if(i < total_gpus / 2) {
+        gpus[i] = lhs[i];
+      }
+      else {
+        gpus[i] = rhs[i - (total_gpus) / 2];
+      }
+    }
+    printf("[SETTING]: gpus[%d]=%d\n", i, gpus[i]);
     CUDACHECK(cudaSetDevice(gpus[i]));
     TESTCHECK(AllocateBuffs(sendbuffs+i, sendBytes, recvbuffs+i, recvBytes, expected+i, (size_t)maxBytes));
     if (streamnull)
@@ -949,6 +985,9 @@ testResult_t run() {
   if (!parallel_init) {
      if (ncclProcs == 1) {
        NCCLCHECK(ncclCommInitAll(comms, nGpus*nThreads, gpus));
+       for (int i = 0; i < nGpus * nThreads; ++i) {
+         printf("[INIT]: comms[%d] is at %p\n", i, (void*) (comms + i));
+       }
      } else {
        NCCLCHECK(ncclGroupStart());
        for (int i=0; i<nGpus*nThreads; i++) {
