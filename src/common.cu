@@ -910,7 +910,19 @@ testResult_t run() {
   char* envstr = getenv("NCCL_TESTS_DEVICE");
   int gpu0 = envstr ? atoi(envstr) : -1;
   for (int i=0; i<nThreads*nGpus; i++) {
-    int cudaDev = (gpu0 != -1 ? gpu0 : localRank*nThreads*nGpus) + i;
+    int cudaDev;
+    if (num_lhs == 0) {
+      cudaDev = (gpu0 != -1 ? gpu0 : localRank*nThreads*nGpus) + i;
+    }
+    else {
+      int total_gpus = num_lhs + num_rhs;
+      if(i < total_gpus / 2) {
+        cudaDev = lhs[i];
+      }
+      else {
+        cudaDev = rhs[i - (total_gpus) / 2];
+      }
+    }
     int rank = proc*nThreads*nGpus+i;
     cudaDeviceProp prop;
     CUDACHECK(cudaGetDeviceProperties(&prop, cudaDev));
