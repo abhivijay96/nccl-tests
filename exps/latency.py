@@ -22,7 +22,7 @@ def get_xs_ys():
             if '[STAT]' in line:
                 print(line)
                 parts = line.split()
-                time_val = float(parts[6])
+                time_val = float(parts[5])
                 current_y.append(time_val)
 
         if len(current_y) > 0:
@@ -34,18 +34,27 @@ xs, ys = get_xs_ys()
 print(xs)
 print(ys)
 
+for y in ys:
+    y.sort()
+
 # calculate the average and percentiles of ys
-avg = [np.mean(y) for y in ys]
+avg = [round(np.percentile(y, 50), 2) for y in ys]
 p25 = [np.percentile(y, 25) for y in ys]
 p75 = [np.percentile(y, 75) for y in ys]
 
+print(xs)
+print(avg)
+print(p25)
+print(p75)
+
 # create a figure and an axes object
-fig, ax = plt.subplots()
+fig, ax = plt.subplots(figsize=(15.8, 4.8))
 
 # plot the scatter plot with error bars on the axes object
 ax.scatter(xs, avg)
-ax.errorbar(xs, avg, yerr=[p25, p75], fmt='o')
+ax.fill_between(xs, p25, p75, color='blue', alpha=0.2)
 ax.set_xlabel('GPUs')
+plt.xticks(rotation=270)
 ax.set_ylabel('Latency (us)')
 
 plt.tight_layout()

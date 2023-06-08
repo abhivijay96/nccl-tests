@@ -14,7 +14,7 @@ do
     if [ "$i" -ne "$j" ]
     then
       echo "[PAIR]: $i $j"
-      ../build/latency_perf -b 4 -e 4 -i 1 -g 2 -L $i -R $j -a 1
+      ../build/latency_perf -b $2 -e $2 -i 1 -g 2 -L $i -R $j -a 1
     fi
   done
 done
