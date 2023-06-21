@@ -38,6 +38,7 @@ def get_x_ys(exp_type, min_gpus, max_gpus):
                 line = line.strip()
                 if 'float' not in line:
                     continue
+                line = line.replace('[STAT]:', '')
                 parts = line.split()
                 # 0 - data size
                 # 7 - bus bw out of order

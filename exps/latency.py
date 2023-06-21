@@ -1,8 +1,12 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import sys
+
+data_size = sys.argv[1]
+data_size_mb = float(data_size)
 
 def get_xs_ys():
-    with open('latency.log') as log_file:
+    with open('latency_{}.log'.format(data_size)) as log_file:
         xs = []
         ys = []
         current_y = []
@@ -23,7 +27,7 @@ def get_xs_ys():
                 print(line)
                 parts = line.split()
                 time_val = float(parts[5])
-                current_y.append(time_val)
+                current_y.append((data_size_mb / 1024) * 10**6 / time_val)
 
         if len(current_y) > 0:
             ys.append(current_y)
@@ -55,7 +59,8 @@ ax.scatter(xs, avg)
 ax.fill_between(xs, p25, p75, color='blue', alpha=0.2)
 ax.set_xlabel('GPUs')
 plt.xticks(rotation=270)
-ax.set_ylabel('Latency (us)')
+plt.ylim((100, 280))
+ax.set_ylabel('BW (GB/s)')
 
 plt.tight_layout()
-plt.savefig('latency.png')
+plt.savefig('bw_{}MB.png'.format(data_size))
