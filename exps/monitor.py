@@ -6,6 +6,7 @@ import time
 def get_nvlink_bandwidth():
   # Run the command and capture the output
   output = subprocess.run(["nvidia-smi", "nvlink", "-gt", "d"], stdout=PIPE, stderr=PIPE, universal_newlines=True)
+#   output = subprocess.run(["ls", "-lh"], stdout=PIPE, stderr=PIPE, universal_newlines=True)
   # Check if the command was successful
   if output.returncode == 0:
     # Return the output string
@@ -43,17 +44,23 @@ def print_data(current_values, init_counter_values, key_type):
     for gpu in current_values:
         nvlin_id = 0
         for x, y in zip(init_counter_values[gpu][key_type], current_values[gpu][key_type]):
-            print('GPU {}/{}, link {}, {} KB'.format(gpu, key_type, nvlin_id, y - x))
+            print('GPU {}/{}, link {}, {} KB, {}'.format(gpu, key_type, nvlin_id, y - x, current_time_ms()))
             nvlin_id += 1
+
+def current_time_ms():
+  return int(time.time() * 1000)
+
 
 # Call the function and print the output string
 output_string = get_nvlink_bandwidth()
 init_counter_values = get_counter_values(output_string)
 
+start_time = current_time_ms()
 
 while True:
-    time.sleep(0.05)
+    start_time = current_time_ms()
     output_string = get_nvlink_bandwidth()
+    # print('Time: {}'.format(current_time_ms() - start_time))
     current_values = get_counter_values(output_string)
     print_data(current_values, init_counter_values, tx_key)
     print_data(current_values, init_counter_values, rx_key)

@@ -1,0 +1,20 @@
+# nThread 1 nGpus 1 minBytes 134217728 maxBytes 4294967296 step: 2(factor) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  40360 on sshd-6dd579cbbc-ddzsw device  0 [0x27] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=0
+[INIT]: comms[0] is at 0x55d89d018ac0
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:134217728      33554432     float    none      -1    205.7  652.45    0.00      0    44.44  3020.28    0.00    N/A
+[STAT]:268435456      67108864     float    none      -1    378.4  709.33    0.00      0    43.92  6112.11    0.00    N/A
+[STAT]:536870912     134217728     float    none      -1    721.2  744.41    0.00      0    44.32  12114.69    0.00    N/A
+[STAT]:1073741824     268435456     float    none      -1   1405.7  763.84    0.00      0    44.20  24294.86    0.00    N/A
+[STAT]:2147483648     536870912     float    none      -1   2789.2  769.93    0.00      0    44.75  47991.41    0.00    N/A
+[STAT]:4294967296    1073741824     float    none      -1   5610.2  765.57    0.00      0    43.95  97734.62    0.00    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0 
+#
+

@@ -1,0 +1,49 @@
+# nThread 1 nGpus 5 minBytes 96 maxBytes 419430400 step: 2(factor) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  20068 on sshd-6dd579cbbc-ddzsw device  0 [0x27] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  20068 on sshd-6dd579cbbc-ddzsw device  1 [0x2a] NVIDIA A100-SXM4-80GB
+#  Rank  2 Group  0 Pid  20068 on sshd-6dd579cbbc-ddzsw device  2 [0x51] NVIDIA A100-SXM4-80GB
+#  Rank  3 Group  0 Pid  20068 on sshd-6dd579cbbc-ddzsw device  3 [0x57] NVIDIA A100-SXM4-80GB
+#  Rank  4 Group  0 Pid  20068 on sshd-6dd579cbbc-ddzsw device  4 [0x9e] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=0
+[SETTING]: gpus[1]=1
+[SETTING]: gpus[2]=2
+[SETTING]: gpus[3]=3
+[SETTING]: gpus[4]=4
+[INIT]: comms[0] is at 0x55917df285d0
+[INIT]: comms[1] is at 0x55917df285d8
+[INIT]: comms[2] is at 0x55917df285e0
+[INIT]: comms[3] is at 0x55917df285e8
+[INIT]: comms[4] is at 0x55917df285f0
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:   96            24     float     sum      -1    14.74    0.01    0.01      0    14.71    0.01    0.01      0
+[STAT]:  192            48     float     sum      -1    14.81    0.01    0.02      0    14.74    0.01    0.02      0
+[STAT]:  384            96     float     sum      -1    14.76    0.03    0.04      0    14.89    0.03    0.04      0
+[STAT]:  768           192     float     sum      -1    14.74    0.05    0.08      0    14.75    0.05    0.08      0
+[STAT]: 1536           384     float     sum      -1    14.76    0.10    0.17      0    15.00    0.10    0.16      0
+[STAT]: 3072           768     float     sum      -1    16.91    0.18    0.29      0    16.83    0.18    0.29      0
+[STAT]: 6144          1536     float     sum      -1    17.13    0.36    0.57      0    16.28    0.38    0.60      0
+[STAT]:12288          3072     float     sum      -1    18.18    0.68    1.08      0    18.55    0.66    1.06      0
+[STAT]:24576          6144     float     sum      -1    22.19    1.11    1.77      0    21.75    1.13    1.81      0
+[STAT]:49152         12288     float     sum      -1    25.49    1.93    3.08      0    25.20    1.95    3.12      0
+[STAT]:98304         24576     float     sum      -1    27.90    3.52    5.64      0    27.04    3.64    5.82      0
+[STAT]:196608         49152     float     sum      -1    33.32    5.90    9.44      0    32.35    6.08    9.72      0
+[STAT]:393216         98304     float     sum      -1    42.84    9.18   14.69      0    42.86    9.17   14.68      0
+[STAT]:786432        196608     float     sum      -1    54.29   14.49   23.18      0    54.52   14.42   23.08      0
+[STAT]:1572864        393216     float     sum      -1    72.78   21.61   34.58      0    72.09   21.82   34.91      0
+[STAT]:3145728        786432     float     sum      -1    83.59   37.63   60.22      0    83.40   37.72   60.35      0
+[STAT]:6291456       1572864     float     sum      -1    120.7   52.15   83.43      0    119.5   52.67   84.27      0
+[STAT]:12582912       3145728     float     sum      -1    154.0   81.72  130.75      0    154.6   81.37  130.20      0
+[STAT]:25165824       6291456     float     sum      -1    238.7  105.42  168.67      0    236.8  106.26  170.01      0
+[STAT]:50331648      12582912     float     sum      -1    410.3  122.67  196.27      0    408.6  123.19  197.10      0
+[STAT]:100663296      25165824     float     sum      -1    759.2  132.59  212.15      0    759.3  132.58  212.13      0
+[STAT]:201326592      50331648     float     sum      -1   1467.4  137.20  219.52      0   1467.6  137.18  219.49      0
+[STAT]:402653184     100663296     float     sum      -1   2874.9  140.06  224.09      0   2876.2  140.00  223.99      0
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 60.4935 
+#
+

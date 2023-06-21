@@ -1,0 +1,1512 @@
+[PAIR]: 0 1
+Parsing LHS 0
+NUM LHS 1
+Parsing RHS 1
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25404 on sshd-6dd579cbbc-ddzsw device  0 [0x27] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25404 on sshd-6dd579cbbc-ddzsw device  1 [0x2a] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=0
+[SETTING]: gpus[1]=1
+[INIT]: comms[0] is at 0x5593b66a55b0
+[INIT]: comms[1] is at 0x5593b66a55b8
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    433.5  241.87  241.87  2.62144e+07    433.8  241.72  241.72    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.0  241.63  241.63  2.62144e+07    434.1  241.58  241.58    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.5  241.34  241.34  2.62144e+07    433.9  241.65  241.65    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.4  241.41  241.41  2.62144e+07    433.9  241.68  241.68    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.5  241.35  241.35  2.62144e+07    433.6  241.83  241.83    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.605 
+#
+
+[PAIR]: 0 2
+Parsing LHS 0
+NUM LHS 1
+Parsing RHS 2
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25442 on sshd-6dd579cbbc-ddzsw device  0 [0x27] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25442 on sshd-6dd579cbbc-ddzsw device  2 [0x51] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=0
+[SETTING]: gpus[1]=2
+[INIT]: comms[0] is at 0x55f9350cf620
+[INIT]: comms[1] is at 0x55f9350cf628
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    437.3  239.78  239.78  2.62144e+07    437.8  239.49  239.49    N/A
+[STAT]:104857600      26214400     float     sum      -1    438.0  239.39  239.39  2.62144e+07    437.4  239.72  239.72    N/A
+[STAT]:104857600      26214400     float     sum      -1    438.8  238.95  238.95  2.62144e+07    437.4  239.75  239.75    N/A
+[STAT]:104857600      26214400     float     sum      -1    438.0  239.40  239.40  2.62144e+07    438.2  239.27  239.27    N/A
+[STAT]:104857600      26214400     float     sum      -1    437.8  239.52  239.52  2.62144e+07    438.4  239.19  239.19    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 239.448 
+#
+
+[PAIR]: 0 3
+Parsing LHS 0
+NUM LHS 1
+Parsing RHS 3
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25462 on sshd-6dd579cbbc-ddzsw device  0 [0x27] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25462 on sshd-6dd579cbbc-ddzsw device  3 [0x57] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=0
+[SETTING]: gpus[1]=3
+[INIT]: comms[0] is at 0x563924533fd0
+[INIT]: comms[1] is at 0x563924533fd8
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    434.9  241.10  241.10  2.62144e+07    435.2  240.96  240.96    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.9  240.53  240.53  2.62144e+07    434.7  241.22  241.22    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.0  241.61  241.61  2.62144e+07    434.3  241.43  241.43    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.4  240.83  240.83  2.62144e+07    434.2  241.50  241.50    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.6  241.26  241.26  2.62144e+07    434.7  241.23  241.23    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.168 
+#
+
+[PAIR]: 0 4
+Parsing LHS 0
+NUM LHS 1
+Parsing RHS 4
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25474 on sshd-6dd579cbbc-ddzsw device  0 [0x27] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25474 on sshd-6dd579cbbc-ddzsw device  4 [0x9e] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=0
+[SETTING]: gpus[1]=4
+[INIT]: comms[0] is at 0x562bdd950530
+[INIT]: comms[1] is at 0x562bdd950538
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    435.5  240.78  240.78  2.62144e+07    434.5  241.30  241.30    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.9  241.12  241.12  2.62144e+07    435.0  241.03  241.03    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.2  240.94  240.94  2.62144e+07    435.5  240.76  240.76    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.2  240.96  240.96  2.62144e+07    435.5  240.79  240.79    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.1  241.53  241.53  2.62144e+07    434.5  241.34  241.34    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.055 
+#
+
+[PAIR]: 0 5
+Parsing LHS 0
+NUM LHS 1
+Parsing RHS 5
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25486 on sshd-6dd579cbbc-ddzsw device  0 [0x27] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25486 on sshd-6dd579cbbc-ddzsw device  5 [0xa4] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=0
+[SETTING]: gpus[1]=5
+[INIT]: comms[0] is at 0x56472d49df80
+[INIT]: comms[1] is at 0x56472d49df88
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    434.7  241.24  241.24  2.62144e+07    435.7  240.69  240.69    N/A
+[STAT]:104857600      26214400     float     sum      -1    436.2  240.37  240.37  2.62144e+07    435.2  240.97  240.97    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.5  240.76  240.76  2.62144e+07    435.9  240.57  240.57    N/A
+[STAT]:104857600      26214400     float     sum      -1    437.0  239.95  239.95  2.62144e+07    435.9  240.55  240.55    N/A
+[STAT]:104857600      26214400     float     sum      -1    436.0  240.49  240.49  2.62144e+07    435.2  240.94  240.94    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 240.651 
+#
+
+[PAIR]: 0 6
+Parsing LHS 0
+NUM LHS 1
+Parsing RHS 6
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25498 on sshd-6dd579cbbc-ddzsw device  0 [0x27] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25498 on sshd-6dd579cbbc-ddzsw device  6 [0xc7] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=0
+[SETTING]: gpus[1]=6
+[INIT]: comms[0] is at 0x556435046580
+[INIT]: comms[1] is at 0x556435046588
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    435.8  240.60  240.60  2.62144e+07    435.5  240.77  240.77    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.6  241.30  241.30  2.62144e+07    435.9  240.54  240.54    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.0  241.59  241.59  2.62144e+07    435.0  241.06  241.06    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.4  240.81  240.81  2.62144e+07    435.8  240.62  240.62    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.2  240.93  240.93  2.62144e+07    436.7  240.12  240.12    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 240.834 
+#
+
+[PAIR]: 0 7
+Parsing LHS 0
+NUM LHS 1
+Parsing RHS 7
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25512 on sshd-6dd579cbbc-ddzsw device  0 [0x27] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25512 on sshd-6dd579cbbc-ddzsw device  7 [0xca] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=0
+[SETTING]: gpus[1]=7
+[INIT]: comms[0] is at 0x561baf799070
+[INIT]: comms[1] is at 0x561baf799078
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    433.8  241.73  241.73  2.62144e+07    434.8  241.18  241.18    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.3  241.98  241.98  2.62144e+07    433.9  241.64  241.64    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.6  241.85  241.85  2.62144e+07    433.4  241.93  241.93    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.1  241.57  241.57  2.62144e+07    433.5  241.88  241.88    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.4  241.94  241.94  2.62144e+07    433.6  241.81  241.81    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.751 
+#
+
+[PAIR]: 1 0
+Parsing LHS 1
+NUM LHS 1
+Parsing RHS 0
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25524 on sshd-6dd579cbbc-ddzsw device  1 [0x2a] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25524 on sshd-6dd579cbbc-ddzsw device  0 [0x27] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=1
+[SETTING]: gpus[1]=0
+[INIT]: comms[0] is at 0x55628c59e610
+[INIT]: comms[1] is at 0x55628c59e618
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    534.0  196.38  196.38  2.62144e+07    436.3  240.34  240.34    N/A
+[STAT]:104857600      26214400     float     sum      -1    436.2  240.41  240.41  2.62144e+07    436.0  240.52  240.52    N/A
+[STAT]:104857600      26214400     float     sum      -1    436.7  240.12  240.12  2.62144e+07    435.5  240.78  240.78    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.2  240.92  240.92  2.62144e+07    436.7  240.10  240.10    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.2  240.97  240.97  2.62144e+07    436.2  240.40  240.40    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 236.093 
+#
+
+[PAIR]: 1 2
+Parsing LHS 1
+NUM LHS 1
+Parsing RHS 2
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25536 on sshd-6dd579cbbc-ddzsw device  1 [0x2a] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25536 on sshd-6dd579cbbc-ddzsw device  2 [0x51] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=1
+[SETTING]: gpus[1]=2
+[INIT]: comms[0] is at 0x55ce655924f0
+[INIT]: comms[1] is at 0x55ce655924f8
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    435.2  240.94  240.94  2.62144e+07    434.9  241.10  241.10    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.3  241.46  241.46  2.62144e+07    435.3  240.88  240.88    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.6  240.70  240.70  2.62144e+07    434.7  241.23  241.23    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.3  240.87  240.87  2.62144e+07    434.3  241.44  241.44    N/A
+[STAT]:104857600      26214400     float     sum      -1    436.5  240.23  240.23  2.62144e+07    435.9  240.54  240.54    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 240.939 
+#
+
+[PAIR]: 1 3
+Parsing LHS 1
+NUM LHS 1
+Parsing RHS 3
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25548 on sshd-6dd579cbbc-ddzsw device  1 [0x2a] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25548 on sshd-6dd579cbbc-ddzsw device  3 [0x57] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=1
+[SETTING]: gpus[1]=3
+[INIT]: comms[0] is at 0x561360cb0610
+[INIT]: comms[1] is at 0x561360cb0618
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    435.4  240.83  240.83  2.62144e+07    435.6  240.72  240.72    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.6  240.74  240.74  2.62144e+07    435.3  240.86  240.86    N/A
+[STAT]:104857600      26214400     float     sum      -1    437.1  239.89  239.89  2.62144e+07    436.2  240.38  240.38    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.4  240.83  240.83  2.62144e+07    435.7  240.68  240.68    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.4  240.82  240.82  2.62144e+07    435.8  240.59  240.59    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 240.633 
+#
+
+[PAIR]: 1 4
+Parsing LHS 1
+NUM LHS 1
+Parsing RHS 4
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25560 on sshd-6dd579cbbc-ddzsw device  1 [0x2a] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25560 on sshd-6dd579cbbc-ddzsw device  4 [0x9e] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=1
+[SETTING]: gpus[1]=4
+[INIT]: comms[0] is at 0x55d5e787df80
+[INIT]: comms[1] is at 0x55d5e787df88
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    431.8  242.84  242.84  2.62144e+07    433.3  241.97  241.97    N/A
+[STAT]:104857600      26214400     float     sum      -1    432.9  242.23  242.23  2.62144e+07    432.9  242.25  242.25    N/A
+[STAT]:104857600      26214400     float     sum      -1    432.4  242.53  242.53  2.62144e+07    432.9  242.23  242.23    N/A
+[STAT]:104857600      26214400     float     sum      -1    432.0  242.72  242.72  2.62144e+07    432.6  242.41  242.41    N/A
+[STAT]:104857600      26214400     float     sum      -1    432.8  242.29  242.29  2.62144e+07    432.5  242.46  242.46    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 242.393 
+#
+
+[PAIR]: 1 5
+Parsing LHS 1
+NUM LHS 1
+Parsing RHS 5
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25572 on sshd-6dd579cbbc-ddzsw device  1 [0x2a] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25572 on sshd-6dd579cbbc-ddzsw device  5 [0xa4] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=1
+[SETTING]: gpus[1]=5
+[INIT]: comms[0] is at 0x5607e2125070
+[INIT]: comms[1] is at 0x5607e2125078
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    433.7  241.78  241.78  2.62144e+07    433.9  241.66  241.66    N/A
+[STAT]:104857600      26214400     float     sum      -1    436.0  240.52  240.52  2.62144e+07    435.7  240.69  240.69    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.5  240.78  240.78  2.62144e+07    435.2  240.93  240.93    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.9  241.69  241.69  2.62144e+07    433.8  241.73  241.73    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.1  240.98  240.98  2.62144e+07    435.1  241.02  241.02    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.178 
+#
+
+[PAIR]: 1 6
+Parsing LHS 1
+NUM LHS 1
+Parsing RHS 6
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25584 on sshd-6dd579cbbc-ddzsw device  1 [0x2a] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25584 on sshd-6dd579cbbc-ddzsw device  6 [0xc7] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=1
+[SETTING]: gpus[1]=6
+[INIT]: comms[0] is at 0x55774b22d5b0
+[INIT]: comms[1] is at 0x55774b22d5b8
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    431.7  242.88  242.88  2.62144e+07    433.0  242.16  242.16    N/A
+[STAT]:104857600      26214400     float     sum      -1    432.0  242.72  242.72  2.62144e+07    433.0  242.14  242.14    N/A
+[STAT]:104857600      26214400     float     sum      -1    432.9  242.21  242.21  2.62144e+07    432.8  242.28  242.28    N/A
+[STAT]:104857600      26214400     float     sum      -1    432.0  242.74  242.74  2.62144e+07    432.8  242.27  242.27    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.4  241.95  241.95  2.62144e+07    432.0  242.72  242.72    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 242.408 
+#
+
+[PAIR]: 1 7
+Parsing LHS 1
+NUM LHS 1
+Parsing RHS 7
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25596 on sshd-6dd579cbbc-ddzsw device  1 [0x2a] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25596 on sshd-6dd579cbbc-ddzsw device  7 [0xca] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=1
+[SETTING]: gpus[1]=7
+[INIT]: comms[0] is at 0x556a0e357650
+[INIT]: comms[1] is at 0x556a0e357658
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    436.3  240.33  240.33  2.62144e+07    435.1  240.98  240.98    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.2  240.96  240.96  2.62144e+07    435.7  240.65  240.65    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.3  240.90  240.90  2.62144e+07    436.8  240.06  240.06    N/A
+[STAT]:104857600      26214400     float     sum      -1    436.6  240.17  240.17  2.62144e+07    435.5  240.77  240.77    N/A
+[STAT]:104857600      26214400     float     sum      -1    437.2  239.84  239.84  2.62144e+07    436.4  240.29  240.29    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 240.495 
+#
+
+[PAIR]: 2 0
+Parsing LHS 2
+NUM LHS 1
+Parsing RHS 0
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25608 on sshd-6dd579cbbc-ddzsw device  2 [0x51] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25608 on sshd-6dd579cbbc-ddzsw device  0 [0x27] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=2
+[SETTING]: gpus[1]=0
+[INIT]: comms[0] is at 0x56043825c4f0
+[INIT]: comms[1] is at 0x56043825c4f8
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    437.1  239.90  239.90  2.62144e+07    437.4  239.74  239.74    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.6  240.71  240.71  2.62144e+07    436.6  240.18  240.18    N/A
+[STAT]:104857600      26214400     float     sum      -1    436.3  240.33  240.33  2.62144e+07    436.6  240.19  240.19    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.5  240.77  240.77  2.62144e+07    435.7  240.69  240.69    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.5  240.79  240.79  2.62144e+07    437.4  239.75  239.75    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 240.303 
+#
+
+[PAIR]: 2 1
+Parsing LHS 2
+NUM LHS 1
+Parsing RHS 1
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25622 on sshd-6dd579cbbc-ddzsw device  2 [0x51] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25622 on sshd-6dd579cbbc-ddzsw device  1 [0x2a] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=2
+[SETTING]: gpus[1]=1
+[INIT]: comms[0] is at 0x5615e6d354e0
+[INIT]: comms[1] is at 0x5615e6d354e8
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    433.9  241.68  241.68  2.62144e+07    433.3  242.00  242.00    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.0  241.59  241.59  2.62144e+07    434.0  241.63  241.63    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.2  242.03  242.03  2.62144e+07    434.7  241.24  241.24    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.2  242.06  242.06  2.62144e+07    434.8  241.18  241.18    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.9  241.65  241.65  2.62144e+07    434.5  241.34  241.34    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.64 
+#
+
+[PAIR]: 2 3
+Parsing LHS 2
+NUM LHS 1
+Parsing RHS 3
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25634 on sshd-6dd579cbbc-ddzsw device  2 [0x51] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25634 on sshd-6dd579cbbc-ddzsw device  3 [0x57] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=2
+[SETTING]: gpus[1]=3
+[INIT]: comms[0] is at 0x55b7105b0610
+[INIT]: comms[1] is at 0x55b7105b0618
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    433.9  241.64  241.64  2.62144e+07    434.3  241.47  241.47    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.3  241.42  241.42  2.62144e+07    433.3  242.00  242.00    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.9  241.64  241.64  2.62144e+07    433.1  242.08  242.08    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.6  241.84  241.84  2.62144e+07    434.3  241.44  241.44    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.9  241.67  241.67  2.62144e+07    433.6  241.83  241.83    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.704 
+#
+
+[PAIR]: 2 4
+Parsing LHS 2
+NUM LHS 1
+Parsing RHS 4
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25646 on sshd-6dd579cbbc-ddzsw device  2 [0x51] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25646 on sshd-6dd579cbbc-ddzsw device  4 [0x9e] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=2
+[SETTING]: gpus[1]=4
+[INIT]: comms[0] is at 0x559c13557650
+[INIT]: comms[1] is at 0x559c13557658
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    433.0  242.15  242.15  2.62144e+07    431.9  242.76  242.76    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.6  241.83  241.83  2.62144e+07    432.2  242.62  242.62    N/A
+[STAT]:104857600      26214400     float     sum      -1    432.5  242.44  242.44  2.62144e+07    431.8  242.82  242.82    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.0  242.18  242.18  2.62144e+07    432.3  242.53  242.53    N/A
+[STAT]:104857600      26214400     float     sum      -1    432.3  242.58  242.58  2.62144e+07    432.5  242.42  242.42    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 242.432 
+#
+
+[PAIR]: 2 5
+Parsing LHS 2
+NUM LHS 1
+Parsing RHS 5
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25658 on sshd-6dd579cbbc-ddzsw device  2 [0x51] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25658 on sshd-6dd579cbbc-ddzsw device  5 [0xa4] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=2
+[SETTING]: gpus[1]=5
+[INIT]: comms[0] is at 0x5606efa97710
+[INIT]: comms[1] is at 0x5606efa97718
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    434.8  241.15  241.15  2.62144e+07    433.6  241.81  241.81    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.3  240.91  240.91  2.62144e+07    435.0  241.06  241.06    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.2  240.97  240.97  2.62144e+07    434.7  241.20  241.20    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.6  241.26  241.26  2.62144e+07    433.9  241.66  241.66    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.6  241.26  241.26  2.62144e+07    434.2  241.49  241.49    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.276 
+#
+
+[PAIR]: 2 6
+Parsing LHS 2
+NUM LHS 1
+Parsing RHS 6
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25670 on sshd-6dd579cbbc-ddzsw device  2 [0x51] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25670 on sshd-6dd579cbbc-ddzsw device  6 [0xc7] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=2
+[SETTING]: gpus[1]=6
+[INIT]: comms[0] is at 0x563c9d605650
+[INIT]: comms[1] is at 0x563c9d605658
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    434.3  241.46  241.46  2.62144e+07    434.8  241.15  241.15    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.8  241.18  241.18  2.62144e+07    435.2  240.96  240.96    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.8  241.16  241.16  2.62144e+07    433.4  241.96  241.96    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.1  241.55  241.55  2.62144e+07    435.0  241.08  241.08    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.7  241.21  241.21  2.62144e+07    434.7  241.21  241.21    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.29 
+#
+
+[PAIR]: 2 7
+Parsing LHS 2
+NUM LHS 1
+Parsing RHS 7
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25684 on sshd-6dd579cbbc-ddzsw device  2 [0x51] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25684 on sshd-6dd579cbbc-ddzsw device  7 [0xca] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=2
+[SETTING]: gpus[1]=7
+[INIT]: comms[0] is at 0x5644258af520
+[INIT]: comms[1] is at 0x5644258af528
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    434.3  241.47  241.47  2.62144e+07    434.8  241.18  241.18    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.6  241.85  241.85  2.62144e+07    434.1  241.56  241.56    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.3  241.98  241.98  2.62144e+07    435.1  240.99  240.99    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.9  241.13  241.13  2.62144e+07    434.0  241.61  241.61    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.9  241.08  241.08  2.62144e+07    434.2  241.49  241.49    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.434 
+#
+
+[PAIR]: 3 0
+Parsing LHS 3
+NUM LHS 1
+Parsing RHS 0
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25696 on sshd-6dd579cbbc-ddzsw device  3 [0x57] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25696 on sshd-6dd579cbbc-ddzsw device  0 [0x27] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=3
+[SETTING]: gpus[1]=0
+[INIT]: comms[0] is at 0x55e948845070
+[INIT]: comms[1] is at 0x55e948845078
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    435.7  240.69  240.69  2.62144e+07    435.2  240.93  240.93    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.3  240.91  240.91  2.62144e+07    437.1  239.92  239.92    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.1  241.01  241.01  2.62144e+07    435.5  240.75  240.75    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.8  241.16  241.16  2.62144e+07    435.7  240.68  240.68    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.6  240.70  240.70  2.62144e+07    435.0  241.05  241.05    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 240.779 
+#
+
+[PAIR]: 3 1
+Parsing LHS 3
+NUM LHS 1
+Parsing RHS 1
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25708 on sshd-6dd579cbbc-ddzsw device  3 [0x57] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25708 on sshd-6dd579cbbc-ddzsw device  1 [0x2a] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=3
+[SETTING]: gpus[1]=1
+[INIT]: comms[0] is at 0x55806c6e8fc0
+[INIT]: comms[1] is at 0x55806c6e8fc8
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    432.7  242.35  242.35  2.62144e+07    431.8  242.83  242.83    N/A
+[STAT]:104857600      26214400     float     sum      -1    432.1  242.68  242.68  2.62144e+07    432.3  242.56  242.56    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.5  241.91  241.91  2.62144e+07    431.4  243.04  243.04    N/A
+[STAT]:104857600      26214400     float     sum      -1    431.5  243.00  243.00  2.62144e+07    432.3  242.54  242.54    N/A
+[STAT]:104857600      26214400     float     sum      -1    432.6  242.41  242.41  2.62144e+07    432.0  242.75  242.75    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 242.606 
+#
+
+[PAIR]: 3 2
+Parsing LHS 3
+NUM LHS 1
+Parsing RHS 2
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25721 on sshd-6dd579cbbc-ddzsw device  3 [0x57] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25721 on sshd-6dd579cbbc-ddzsw device  2 [0x51] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=3
+[SETTING]: gpus[1]=2
+[INIT]: comms[0] is at 0x5570a2724490
+[INIT]: comms[1] is at 0x5570a2724498
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    436.9  240.02  240.02  2.62144e+07    437.6  239.64  239.64    N/A
+[STAT]:104857600      26214400     float     sum      -1    437.5  239.67  239.67  2.62144e+07    435.4  240.85  240.85    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.8  240.63  240.63  2.62144e+07    436.4  240.29  240.29    N/A
+[STAT]:104857600      26214400     float     sum      -1    436.7  240.12  240.12  2.62144e+07    433.6  241.81  241.81    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.7  241.76  241.76  2.62144e+07    434.4  241.41  241.41    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 240.618 
+#
+
+[PAIR]: 3 4
+Parsing LHS 3
+NUM LHS 1
+Parsing RHS 4
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25733 on sshd-6dd579cbbc-ddzsw device  3 [0x57] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25733 on sshd-6dd579cbbc-ddzsw device  4 [0x9e] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=3
+[SETTING]: gpus[1]=4
+[INIT]: comms[0] is at 0x55d3b0606030
+[INIT]: comms[1] is at 0x55d3b0606038
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    435.6  240.70  240.70  2.62144e+07    435.1  241.01  241.01    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.9  241.12  241.12  2.62144e+07    434.1  241.54  241.54    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.7  241.77  241.77  2.62144e+07    434.6  241.30  241.30    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.2  241.50  241.50  2.62144e+07    434.0  241.59  241.59    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.1  242.11  242.11  2.62144e+07    433.4  241.94  241.94    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.457 
+#
+
+[PAIR]: 3 5
+Parsing LHS 3
+NUM LHS 1
+Parsing RHS 5
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25745 on sshd-6dd579cbbc-ddzsw device  3 [0x57] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25745 on sshd-6dd579cbbc-ddzsw device  5 [0xa4] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=3
+[SETTING]: gpus[1]=5
+[INIT]: comms[0] is at 0x5589e1ab0590
+[INIT]: comms[1] is at 0x5589e1ab0598
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    434.1  241.55  241.55  2.62144e+07    435.1  241.01  241.01    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.9  241.66  241.66  2.62144e+07    434.6  241.25  241.25    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.3  241.45  241.45  2.62144e+07    435.6  240.74  240.74    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.5  241.35  241.35  2.62144e+07    434.4  241.39  241.39    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.6  241.28  241.28  2.62144e+07    434.3  241.45  241.45    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.313 
+#
+
+[PAIR]: 3 6
+Parsing LHS 3
+NUM LHS 1
+Parsing RHS 6
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25757 on sshd-6dd579cbbc-ddzsw device  3 [0x57] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25757 on sshd-6dd579cbbc-ddzsw device  6 [0xc7] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=3
+[SETTING]: gpus[1]=6
+[INIT]: comms[0] is at 0x556914055f60
+[INIT]: comms[1] is at 0x556914055f68
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    434.7  241.19  241.19  2.62144e+07    434.3  241.45  241.45    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.0  241.58  241.58  2.62144e+07    434.7  241.20  241.20    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.5  241.32  241.32  2.62144e+07    434.0  241.62  241.62    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.2  240.93  240.93  2.62144e+07    434.1  241.57  241.57    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.9  241.11  241.11  2.62144e+07    435.2  240.94  240.94    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.291 
+#
+
+[PAIR]: 3 7
+Parsing LHS 3
+NUM LHS 1
+Parsing RHS 7
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25769 on sshd-6dd579cbbc-ddzsw device  3 [0x57] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25769 on sshd-6dd579cbbc-ddzsw device  7 [0xca] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=3
+[SETTING]: gpus[1]=7
+[INIT]: comms[0] is at 0x55d4eb91a570
+[INIT]: comms[1] is at 0x55d4eb91a578
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    432.7  242.33  242.33  2.62144e+07    432.5  242.46  242.46    N/A
+[STAT]:104857600      26214400     float     sum      -1    432.9  242.24  242.24  2.62144e+07    433.4  241.94  241.94    N/A
+[STAT]:104857600      26214400     float     sum      -1    432.4  242.52  242.52  2.62144e+07    432.7  242.35  242.35    N/A
+[STAT]:104857600      26214400     float     sum      -1    432.4  242.52  242.52  2.62144e+07    433.6  241.82  241.82    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.7  241.75  241.75  2.62144e+07    432.4  242.53  242.53    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 242.245 
+#
+
+[PAIR]: 4 0
+Parsing LHS 4
+NUM LHS 1
+Parsing RHS 0
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25783 on sshd-6dd579cbbc-ddzsw device  4 [0x9e] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25783 on sshd-6dd579cbbc-ddzsw device  0 [0x27] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=4
+[SETTING]: gpus[1]=0
+[INIT]: comms[0] is at 0x55ff680d25b0
+[INIT]: comms[1] is at 0x55ff680d25b8
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    436.6  240.16  240.16  2.62144e+07    436.4  240.26  240.26    N/A
+[STAT]:104857600      26214400     float     sum      -1    437.2  239.86  239.86  2.62144e+07    437.2  239.84  239.84    N/A
+[STAT]:104857600      26214400     float     sum      -1    436.6  240.16  240.16  2.62144e+07    436.6  240.18  240.18    N/A
+[STAT]:104857600      26214400     float     sum      -1    437.3  239.77  239.77  2.62144e+07    437.0  239.97  239.97    N/A
+[STAT]:104857600      26214400     float     sum      -1    437.0  239.93  239.93  2.62144e+07    435.3  240.90  240.90    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 240.102 
+#
+
+[PAIR]: 4 1
+Parsing LHS 4
+NUM LHS 1
+Parsing RHS 1
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25795 on sshd-6dd579cbbc-ddzsw device  4 [0x9e] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25795 on sshd-6dd579cbbc-ddzsw device  1 [0x2a] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=4
+[SETTING]: gpus[1]=1
+[INIT]: comms[0] is at 0x5573b41e2030
+[INIT]: comms[1] is at 0x5573b41e2038
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    432.8  242.30  242.30  2.62144e+07    433.9  241.64  241.64    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.4  241.96  241.96  2.62144e+07    434.3  241.46  241.46    N/A
+[STAT]:104857600      26214400     float     sum      -1    432.8  242.30  242.30  2.62144e+07    433.4  241.93  241.93    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.0  242.19  242.19  2.62144e+07    434.1  241.56  241.56    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.2  242.05  242.05  2.62144e+07    432.6  242.38  242.38    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.976 
+#
+
+[PAIR]: 4 2
+Parsing LHS 4
+NUM LHS 1
+Parsing RHS 2
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25807 on sshd-6dd579cbbc-ddzsw device  4 [0x9e] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25807 on sshd-6dd579cbbc-ddzsw device  2 [0x51] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=4
+[SETTING]: gpus[1]=2
+[INIT]: comms[0] is at 0x558c8fa12570
+[INIT]: comms[1] is at 0x558c8fa12578
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    435.5  240.78  240.78  2.62144e+07    435.5  240.78  240.78    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.8  240.60  240.60  2.62144e+07    435.4  240.84  240.84    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.6  240.71  240.71  2.62144e+07    435.8  240.60  240.60    N/A
+[STAT]:104857600      26214400     float     sum      -1    437.2  239.85  239.85  2.62144e+07    435.9  240.55  240.55    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.3  240.90  240.90  2.62144e+07    435.8  240.62  240.62    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 240.625 
+#
+
+[PAIR]: 4 3
+Parsing LHS 4
+NUM LHS 1
+Parsing RHS 3
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25819 on sshd-6dd579cbbc-ddzsw device  4 [0x9e] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25819 on sshd-6dd579cbbc-ddzsw device  3 [0x57] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=4
+[SETTING]: gpus[1]=3
+[INIT]: comms[0] is at 0x5630d96cb220
+[INIT]: comms[1] is at 0x5630d96cb228
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    432.7  242.35  242.35  2.62144e+07    433.2  242.04  242.04    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.0  242.19  242.19  2.62144e+07    433.4  241.92  241.92    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.7  241.76  241.76  2.62144e+07    434.0  241.62  241.62    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.5  241.86  241.86  2.62144e+07    433.8  241.70  241.70    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.8  241.70  241.70  2.62144e+07    434.5  241.32  241.32    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.846 
+#
+
+[PAIR]: 4 5
+Parsing LHS 4
+NUM LHS 1
+Parsing RHS 5
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25831 on sshd-6dd579cbbc-ddzsw device  4 [0x9e] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25831 on sshd-6dd579cbbc-ddzsw device  5 [0xa4] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=4
+[SETTING]: gpus[1]=5
+[INIT]: comms[0] is at 0x557042516fc0
+[INIT]: comms[1] is at 0x557042516fc8
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    435.2  240.93  240.93  2.62144e+07    434.1  241.58  241.58    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.6  241.81  241.81  2.62144e+07    433.9  241.69  241.69    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.8  241.15  241.15  2.62144e+07    434.5  241.36  241.36    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.2  241.51  241.51  2.62144e+07    434.4  241.40  241.40    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.3  241.44  241.44  2.62144e+07    434.0  241.59  241.59    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.445 
+#
+
+[PAIR]: 4 6
+Parsing LHS 4
+NUM LHS 1
+Parsing RHS 6
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25845 on sshd-6dd579cbbc-ddzsw device  4 [0x9e] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25845 on sshd-6dd579cbbc-ddzsw device  6 [0xc7] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=4
+[SETTING]: gpus[1]=6
+[INIT]: comms[0] is at 0x563011c58000
+[INIT]: comms[1] is at 0x563011c58008
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    434.3  241.45  241.45  2.62144e+07    434.0  241.62  241.62    N/A
+[STAT]:104857600      26214400     float     sum      -1    432.2  242.60  242.60  2.62144e+07    433.3  241.99  241.99    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.9  241.68  241.68  2.62144e+07    433.9  241.68  241.68    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.3  242.00  242.00  2.62144e+07    432.6  242.40  242.40    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.3  241.45  241.45  2.62144e+07    433.5  241.91  241.91    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.877 
+#
+
+[PAIR]: 4 7
+Parsing LHS 4
+NUM LHS 1
+Parsing RHS 7
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25857 on sshd-6dd579cbbc-ddzsw device  4 [0x9e] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25857 on sshd-6dd579cbbc-ddzsw device  7 [0xca] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=4
+[SETTING]: gpus[1]=7
+[INIT]: comms[0] is at 0x561ee4768fd0
+[INIT]: comms[1] is at 0x561ee4768fd8
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    434.8  241.15  241.15  2.62144e+07    433.1  242.10  242.10    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.1  240.98  240.98  2.62144e+07    434.9  241.08  241.08    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.5  241.90  241.90  2.62144e+07    434.6  241.28  241.28    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.6  241.86  241.86  2.62144e+07    433.5  241.86  241.86    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.8  241.71  241.71  2.62144e+07    433.7  241.78  241.78    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.57 
+#
+
+[PAIR]: 5 0
+Parsing LHS 5
+NUM LHS 1
+Parsing RHS 0
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25869 on sshd-6dd579cbbc-ddzsw device  5 [0xa4] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25869 on sshd-6dd579cbbc-ddzsw device  0 [0x27] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=5
+[SETTING]: gpus[1]=0
+[INIT]: comms[0] is at 0x55abb80254f0
+[INIT]: comms[1] is at 0x55abb80254f8
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    433.5  241.88  241.88  2.62144e+07    434.5  241.35  241.35    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.0  241.58  241.58  2.62144e+07    434.9  241.11  241.11    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.1  241.58  241.58  2.62144e+07    435.4  240.84  240.84    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.9  240.56  240.56  2.62144e+07    436.1  240.46  240.46    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.2  240.96  240.96  2.62144e+07    433.6  241.86  241.86    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.219 
+#
+
+[PAIR]: 5 1
+Parsing LHS 5
+NUM LHS 1
+Parsing RHS 1
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25881 on sshd-6dd579cbbc-ddzsw device  5 [0xa4] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25881 on sshd-6dd579cbbc-ddzsw device  1 [0x2a] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=5
+[SETTING]: gpus[1]=1
+[INIT]: comms[0] is at 0x55ac7738d4b0
+[INIT]: comms[1] is at 0x55ac7738d4b8
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    435.4  240.85  240.85  2.62144e+07    435.6  240.73  240.73    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.3  240.90  240.90  2.62144e+07    435.7  240.66  240.66    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.4  240.84  240.84  2.62144e+07    434.9  241.13  241.13    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.7  241.23  241.23  2.62144e+07    435.6  240.73  240.73    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.5  240.77  240.77  2.62144e+07    435.4  240.82  240.82    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 240.867 
+#
+
+[PAIR]: 5 2
+Parsing LHS 5
+NUM LHS 1
+Parsing RHS 2
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25893 on sshd-6dd579cbbc-ddzsw device  5 [0xa4] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25893 on sshd-6dd579cbbc-ddzsw device  2 [0x51] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=5
+[SETTING]: gpus[1]=2
+[INIT]: comms[0] is at 0x56372fe4d5d0
+[INIT]: comms[1] is at 0x56372fe4d5d8
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    436.6  240.19  240.19  2.62144e+07    434.9  241.12  241.12    N/A
+[STAT]:104857600      26214400     float     sum      -1    436.6  240.16  240.16  2.62144e+07    435.9  240.55  240.55    N/A
+[STAT]:104857600      26214400     float     sum      -1    436.3  240.36  240.36  2.62144e+07    435.6  240.72  240.72    N/A
+[STAT]:104857600      26214400     float     sum      -1    436.5  240.21  240.21  2.62144e+07    436.8  240.08  240.08    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.3  240.91  240.91  2.62144e+07    435.6  240.72  240.72    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 240.501 
+#
+
+[PAIR]: 5 3
+Parsing LHS 5
+NUM LHS 1
+Parsing RHS 3
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25905 on sshd-6dd579cbbc-ddzsw device  5 [0xa4] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25905 on sshd-6dd579cbbc-ddzsw device  3 [0x57] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=5
+[SETTING]: gpus[1]=3
+[INIT]: comms[0] is at 0x55d99c80c030
+[INIT]: comms[1] is at 0x55d99c80c038
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    434.3  241.42  241.42  2.62144e+07    435.5  240.77  240.77    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.2  241.49  241.49  2.62144e+07    435.5  240.78  240.78    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.8  241.19  241.19  2.62144e+07    434.5  241.31  241.31    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.1  241.53  241.53  2.62144e+07    433.9  241.64  241.64    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.8  241.14  241.14  2.62144e+07    434.7  241.20  241.20    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.246 
+#
+
+[PAIR]: 5 4
+Parsing LHS 5
+NUM LHS 1
+Parsing RHS 4
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25917 on sshd-6dd579cbbc-ddzsw device  5 [0xa4] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25917 on sshd-6dd579cbbc-ddzsw device  4 [0x9e] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=5
+[SETTING]: gpus[1]=4
+[INIT]: comms[0] is at 0x55cdbe091650
+[INIT]: comms[1] is at 0x55cdbe091658
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    434.0  241.63  241.63  2.62144e+07    434.2  241.47  241.47    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.1  241.55  241.55  2.62144e+07    434.5  241.32  241.32    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.1  241.55  241.55  2.62144e+07    434.2  241.51  241.51    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.1  241.56  241.56  2.62144e+07    434.6  241.27  241.27    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.9  241.68  241.68  2.62144e+07    433.7  241.78  241.78    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.533 
+#
+
+[PAIR]: 5 6
+Parsing LHS 5
+NUM LHS 1
+Parsing RHS 6
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25929 on sshd-6dd579cbbc-ddzsw device  5 [0xa4] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25929 on sshd-6dd579cbbc-ddzsw device  6 [0xc7] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=5
+[SETTING]: gpus[1]=6
+[INIT]: comms[0] is at 0x55e85a1f3650
+[INIT]: comms[1] is at 0x55e85a1f3658
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    434.3  241.42  241.42  2.62144e+07    434.6  241.27  241.27    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.2  241.52  241.52  2.62144e+07    433.9  241.66  241.66    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.5  241.86  241.86  2.62144e+07    433.6  241.84  241.84    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.9  241.12  241.12  2.62144e+07    435.1  241.00  241.00    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.0  241.61  241.61  2.62144e+07    434.2  241.50  241.50    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.479 
+#
+
+[PAIR]: 5 7
+Parsing LHS 5
+NUM LHS 1
+Parsing RHS 7
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25941 on sshd-6dd579cbbc-ddzsw device  5 [0xa4] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25941 on sshd-6dd579cbbc-ddzsw device  7 [0xca] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=5
+[SETTING]: gpus[1]=7
+[INIT]: comms[0] is at 0x560e89a514f0
+[INIT]: comms[1] is at 0x560e89a514f8
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    433.6  241.80  241.80  2.62144e+07    433.9  241.66  241.66    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.9  241.67  241.67  2.62144e+07    434.1  241.54  241.54    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.4  241.92  241.92  2.62144e+07    434.0  241.58  241.58    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.9  241.09  241.09  2.62144e+07    433.5  241.88  241.88    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.8  240.60  240.60  2.62144e+07    433.8  241.70  241.70    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.544 
+#
+
+[PAIR]: 6 0
+Parsing LHS 6
+NUM LHS 1
+Parsing RHS 0
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25955 on sshd-6dd579cbbc-ddzsw device  6 [0xc7] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25955 on sshd-6dd579cbbc-ddzsw device  0 [0x27] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=6
+[SETTING]: gpus[1]=0
+[INIT]: comms[0] is at 0x5614d0afe520
+[INIT]: comms[1] is at 0x5614d0afe528
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    435.5  240.75  240.75  2.62144e+07    436.2  240.39  240.39    N/A
+[STAT]:104857600      26214400     float     sum      -1    436.1  240.45  240.45  2.62144e+07    436.1  240.46  240.46    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.7  240.64  240.64  2.62144e+07    435.0  241.05  241.05    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.3  240.89  240.89  2.62144e+07    435.3  240.88  240.88    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.5  240.80  240.80  2.62144e+07    435.2  240.92  240.92    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 240.723 
+#
+
+[PAIR]: 6 1
+Parsing LHS 6
+NUM LHS 1
+Parsing RHS 1
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25967 on sshd-6dd579cbbc-ddzsw device  6 [0xc7] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25967 on sshd-6dd579cbbc-ddzsw device  1 [0x2a] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=6
+[SETTING]: gpus[1]=1
+[INIT]: comms[0] is at 0x55ca0b1c55c0
+[INIT]: comms[1] is at 0x55ca0b1c55c8
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    433.5  241.89  241.89  2.62144e+07    434.3  241.45  241.45    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.7  241.79  241.79  2.62144e+07    433.8  241.70  241.70    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.2  241.48  241.48  2.62144e+07    433.8  241.74  241.74    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.1  242.12  242.12  2.62144e+07    434.0  241.60  241.60    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.0  241.58  241.58  2.62144e+07    433.0  242.17  242.17    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.752 
+#
+
+[PAIR]: 6 2
+Parsing LHS 6
+NUM LHS 1
+Parsing RHS 2
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25979 on sshd-6dd579cbbc-ddzsw device  6 [0xc7] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25979 on sshd-6dd579cbbc-ddzsw device  2 [0x51] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=6
+[SETTING]: gpus[1]=2
+[INIT]: comms[0] is at 0x55c8b9289650
+[INIT]: comms[1] is at 0x55c8b9289658
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    436.6  240.17  240.17  2.62144e+07    438.4  239.20  239.20    N/A
+[STAT]:104857600      26214400     float     sum      -1    437.7  239.57  239.57  2.62144e+07    437.8  239.51  239.51    N/A
+[STAT]:104857600      26214400     float     sum      -1    437.0  239.97  239.97  2.62144e+07    437.0  239.93  239.93    N/A
+[STAT]:104857600      26214400     float     sum      -1    438.5  239.14  239.14  2.62144e+07    436.9  239.99  239.99    N/A
+[STAT]:104857600      26214400     float     sum      -1    438.0  239.38  239.38  2.62144e+07    436.8  240.05  240.05    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 239.692 
+#
+
+[PAIR]: 6 3
+Parsing LHS 6
+NUM LHS 1
+Parsing RHS 3
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  25991 on sshd-6dd579cbbc-ddzsw device  6 [0xc7] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  25991 on sshd-6dd579cbbc-ddzsw device  3 [0x57] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=6
+[SETTING]: gpus[1]=3
+[INIT]: comms[0] is at 0x55a9df50b710
+[INIT]: comms[1] is at 0x55a9df50b718
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    434.2  241.50  241.50  2.62144e+07    433.8  241.70  241.70    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.6  241.30  241.30  2.62144e+07    434.0  241.60  241.60    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.3  240.90  240.90  2.62144e+07    433.8  241.70  241.70    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.4  241.94  241.94  2.62144e+07    433.4  241.93  241.93    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.2  241.51  241.51  2.62144e+07    434.6  241.28  241.28    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.536 
+#
+
+[PAIR]: 6 4
+Parsing LHS 6
+NUM LHS 1
+Parsing RHS 4
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  26005 on sshd-6dd579cbbc-ddzsw device  6 [0xc7] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  26005 on sshd-6dd579cbbc-ddzsw device  4 [0x9e] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=6
+[SETTING]: gpus[1]=4
+[INIT]: comms[0] is at 0x560c8615d650
+[INIT]: comms[1] is at 0x560c8615d658
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    433.4  241.95  241.95  2.62144e+07    432.6  242.41  242.41    N/A
+[STAT]:104857600      26214400     float     sum      -1    431.7  242.87  242.87  2.62144e+07    432.5  242.44  242.44    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.0  242.15  242.15  2.62144e+07    433.6  241.82  241.82    N/A
+[STAT]:104857600      26214400     float     sum      -1    432.9  242.24  242.24  2.62144e+07    432.3  242.57  242.57    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.0  242.15  242.15  2.62144e+07    432.9  242.24  242.24    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 242.284 
+#
+
+[PAIR]: 6 5
+Parsing LHS 6
+NUM LHS 1
+Parsing RHS 5
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  26017 on sshd-6dd579cbbc-ddzsw device  6 [0xc7] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  26017 on sshd-6dd579cbbc-ddzsw device  5 [0xa4] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=6
+[SETTING]: gpus[1]=5
+[INIT]: comms[0] is at 0x559a8c6ca530
+[INIT]: comms[1] is at 0x559a8c6ca538
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    437.4  239.74  239.74  2.62144e+07    435.6  240.74  240.74    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.8  240.63  240.63  2.62144e+07    435.8  240.62  240.62    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.9  240.54  240.54  2.62144e+07    435.7  240.67  240.67    N/A
+[STAT]:104857600      26214400     float     sum      -1    436.1  240.44  240.44  2.62144e+07    436.0  240.52  240.52    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.2  240.93  240.93  2.62144e+07    436.8  240.06  240.06    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 240.488 
+#
+
+[PAIR]: 6 7
+Parsing LHS 6
+NUM LHS 1
+Parsing RHS 7
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  26029 on sshd-6dd579cbbc-ddzsw device  6 [0xc7] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  26029 on sshd-6dd579cbbc-ddzsw device  7 [0xca] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=6
+[SETTING]: gpus[1]=7
+[INIT]: comms[0] is at 0x55630aff9070
+[INIT]: comms[1] is at 0x55630aff9078
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    432.4  242.50  242.50  2.62144e+07    432.7  242.36  242.36    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.6  241.82  241.82  2.62144e+07    432.4  242.48  242.48    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.2  241.51  241.51  2.62144e+07    433.1  242.13  242.13    N/A
+[STAT]:104857600      26214400     float     sum      -1    432.1  242.68  242.68  2.62144e+07    432.8  242.30  242.30    N/A
+[STAT]:104857600      26214400     float     sum      -1    431.9  242.80  242.80  2.62144e+07    433.8  241.72  241.72    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 242.228 
+#
+
+[PAIR]: 7 0
+Parsing LHS 7
+NUM LHS 1
+Parsing RHS 0
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  26041 on sshd-6dd579cbbc-ddzsw device  7 [0xca] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  26041 on sshd-6dd579cbbc-ddzsw device  0 [0x27] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=7
+[SETTING]: gpus[1]=0
+[INIT]: comms[0] is at 0x564952a35650
+[INIT]: comms[1] is at 0x564952a35658
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    438.2  239.31  239.31  2.62144e+07    438.3  239.22  239.22    N/A
+[STAT]:104857600      26214400     float     sum      -1    436.7  240.12  240.12  2.62144e+07    437.2  239.82  239.82    N/A
+[STAT]:104857600      26214400     float     sum      -1    437.4  239.73  239.73  2.62144e+07    438.1  239.36  239.36    N/A
+[STAT]:104857600      26214400     float     sum      -1    437.6  239.62  239.62  2.62144e+07    437.5  239.67  239.67    N/A
+[STAT]:104857600      26214400     float     sum      -1    437.1  239.87  239.87  2.62144e+07    437.9  239.44  239.44    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 239.616 
+#
+
+[PAIR]: 7 1
+Parsing LHS 7
+NUM LHS 1
+Parsing RHS 1
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  26053 on sshd-6dd579cbbc-ddzsw device  7 [0xca] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  26053 on sshd-6dd579cbbc-ddzsw device  1 [0x2a] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=7
+[SETTING]: gpus[1]=1
+[INIT]: comms[0] is at 0x55767f9df650
+[INIT]: comms[1] is at 0x55767f9df658
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    433.2  242.06  242.06  2.62144e+07    432.4  242.50  242.50    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.3  241.98  241.98  2.62144e+07    432.7  242.31  242.31    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.4  241.40  241.40  2.62144e+07    433.9  241.65  241.65    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.4  241.38  241.38  2.62144e+07    433.7  241.78  241.78    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.4  241.40  241.40  2.62144e+07    434.8  241.17  241.17    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.761 
+#
+
+[PAIR]: 7 2
+Parsing LHS 7
+NUM LHS 1
+Parsing RHS 2
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  26065 on sshd-6dd579cbbc-ddzsw device  7 [0xca] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  26065 on sshd-6dd579cbbc-ddzsw device  2 [0x51] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=7
+[SETTING]: gpus[1]=2
+[INIT]: comms[0] is at 0x56235c94c030
+[INIT]: comms[1] is at 0x56235c94c038
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    434.3  241.41  241.41  2.62144e+07    434.8  241.14  241.14    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.6  241.82  241.82  2.62144e+07    434.0  241.60  241.60    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.3  241.98  241.98  2.62144e+07    435.4  240.83  240.83    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.8  241.16  241.16  2.62144e+07    435.0  241.06  241.06    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.2  241.48  241.48  2.62144e+07    435.0  241.03  241.03    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.351 
+#
+
+[PAIR]: 7 3
+Parsing LHS 7
+NUM LHS 1
+Parsing RHS 3
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  26077 on sshd-6dd579cbbc-ddzsw device  7 [0xca] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  26077 on sshd-6dd579cbbc-ddzsw device  3 [0x57] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=7
+[SETTING]: gpus[1]=3
+[INIT]: comms[0] is at 0x558466e7f4f0
+[INIT]: comms[1] is at 0x558466e7f4f8
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    436.6  240.19  240.19  2.62144e+07    434.9  241.09  241.09    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.5  240.77  240.77  2.62144e+07    435.7  240.65  240.65    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.7  240.65  240.65  2.62144e+07    435.1  241.01  241.01    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.7  240.67  240.67  2.62144e+07    435.8  240.63  240.63    N/A
+[STAT]:104857600      26214400     float     sum      -1    436.0  240.51  240.51  2.62144e+07    435.5  240.78  240.78    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 240.693 
+#
+
+[PAIR]: 7 4
+Parsing LHS 7
+NUM LHS 1
+Parsing RHS 4
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  26089 on sshd-6dd579cbbc-ddzsw device  7 [0xca] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  26089 on sshd-6dd579cbbc-ddzsw device  4 [0x9e] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=7
+[SETTING]: gpus[1]=4
+[INIT]: comms[0] is at 0x55f0543b1220
+[INIT]: comms[1] is at 0x55f0543b1228
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    434.3  241.43  241.43  2.62144e+07    434.6  241.30  241.30    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.2  241.52  241.52  2.62144e+07    434.5  241.31  241.31    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.7  241.23  241.23  2.62144e+07    435.1  240.99  240.99    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.5  241.34  241.34  2.62144e+07    434.3  241.43  241.43    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.2  241.52  241.52  2.62144e+07    433.5  241.86  241.86    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.392 
+#
+
+[PAIR]: 7 5
+Parsing LHS 7
+NUM LHS 1
+Parsing RHS 5
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  26101 on sshd-6dd579cbbc-ddzsw device  7 [0xca] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  26101 on sshd-6dd579cbbc-ddzsw device  5 [0xa4] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=7
+[SETTING]: gpus[1]=5
+[INIT]: comms[0] is at 0x55bccec83070
+[INIT]: comms[1] is at 0x55bccec83078
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    434.1  241.56  241.56  2.62144e+07    435.1  240.98  240.98    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.2  240.96  240.96  2.62144e+07    434.4  241.36  241.36    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.2  241.51  241.51  2.62144e+07    434.3  241.43  241.43    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.4  241.95  241.95  2.62144e+07    434.4  241.37  241.37    N/A
+[STAT]:104857600      26214400     float     sum      -1    433.7  241.75  241.75  2.62144e+07    435.7  240.68  240.68    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.353 
+#
+
+[PAIR]: 7 6
+Parsing LHS 7
+NUM LHS 1
+Parsing RHS 6
+NUM RHS 1
+# nThread 1 nGpus 2 minBytes 104857600 maxBytes 104857600 step: 1(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  26115 on sshd-6dd579cbbc-ddzsw device  7 [0xca] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  26115 on sshd-6dd579cbbc-ddzsw device  6 [0xc7] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=7
+[SETTING]: gpus[1]=6
+[INIT]: comms[0] is at 0x5639ca7cf5b0
+[INIT]: comms[1] is at 0x5639ca7cf5b8
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:104857600      26214400     float     sum      -1    435.8  240.59  240.59  2.62144e+07    435.6  240.72  240.72    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.0  241.05  241.05  2.62144e+07    434.3  241.43  241.43    N/A
+[STAT]:104857600      26214400     float     sum      -1    435.1  240.99  240.99  2.62144e+07    434.7  241.19  241.19    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.7  241.20  241.20  2.62144e+07    434.6  241.27  241.27    N/A
+[STAT]:104857600      26214400     float     sum      -1    434.1  241.54  241.54  2.62144e+07    434.8  241.16  241.16    N/A
+# Out of bounds values : 5 FAILED
+# Avg bus bandwidth    : 241.114 
+#
+

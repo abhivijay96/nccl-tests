@@ -1,0 +1,46 @@
+# nThread 1 nGpus 4 minBytes 96 maxBytes 419430400 step: 2(factor) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  17573 on sshd-6dd579cbbc-ddzsw device  0 [0x27] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  17573 on sshd-6dd579cbbc-ddzsw device  1 [0x2a] NVIDIA A100-SXM4-80GB
+#  Rank  2 Group  0 Pid  17573 on sshd-6dd579cbbc-ddzsw device  2 [0x51] NVIDIA A100-SXM4-80GB
+#  Rank  3 Group  0 Pid  17573 on sshd-6dd579cbbc-ddzsw device  3 [0x57] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=0
+[SETTING]: gpus[1]=1
+[SETTING]: gpus[2]=2
+[SETTING]: gpus[3]=3
+[INIT]: comms[0] is at 0x5628f44ded10
+[INIT]: comms[1] is at 0x5628f44ded18
+[INIT]: comms[2] is at 0x5628f44ded20
+[INIT]: comms[3] is at 0x5628f44ded28
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+[STAT]:   96            24     float    none       0    14.08    0.01    0.01      0    14.05    0.01    0.01      0
+[STAT]:  192            48     float    none       0    14.48    0.01    0.01      0    14.26    0.01    0.01      0
+[STAT]:  384            96     float    none       0    14.47    0.03    0.03      0    14.31    0.03    0.03      0
+[STAT]:  768           192     float    none       0    14.39    0.05    0.05      0    14.55    0.05    0.05      0
+[STAT]: 1536           384     float    none       0    14.05    0.11    0.11      0    14.40    0.11    0.11      0
+[STAT]: 3072           768     float    none       0    14.30    0.21    0.21      0    14.63    0.21    0.21      0
+[STAT]: 6144          1536     float    none       0    14.63    0.42    0.42      0    14.51    0.42    0.42      0
+[STAT]:12288          3072     float    none       0    14.56    0.84    0.84      0    14.29    0.86    0.86      0
+[STAT]:24576          6144     float    none       0    14.18    1.73    1.73      0    14.27    1.72    1.72      0
+[STAT]:49152         12288     float    none       0    16.09    3.06    3.06      0    16.11    3.05    3.05      0
+[STAT]:98304         24576     float    none       0    19.53    5.03    5.03      0    19.29    5.10    5.10      0
+[STAT]:196608         49152     float    none       0    26.28    7.48    7.48      0    26.22    7.50    7.50      0
+[STAT]:393216         98304     float    none       0    40.73    9.65    9.65      0    40.88    9.62    9.62      0
+[STAT]:786432        196608     float    none       0    43.51   18.07   18.07      0    43.70   18.00   18.00      0
+[STAT]:1572864        393216     float    none       0    56.62   27.78   27.78      0    54.80   28.70   28.70      0
+[STAT]:3145728        786432     float    none       0    61.27   51.34   51.34      0    60.33   52.14   52.14      0
+[STAT]:6291456       1572864     float    none       0    72.30   87.01   87.01      0    70.59   89.13   89.13      0
+[STAT]:12582912       3145728     float    none       0    103.3  121.84  121.84      0    100.7  124.96  124.96      0
+[STAT]:25165824       6291456     float    none       0    153.7  163.69  163.69      0    154.0  163.37  163.37      0
+[STAT]:50331648      12582912     float    none       0    266.2  189.06  189.06      0    265.1  189.87  189.87      0
+[STAT]:100663296      25165824     float    none       0    478.0  210.59  210.59      0    478.0  210.61  210.61      0
+[STAT]:201326592      50331648     float    none       0    906.5  222.09  222.09      0    904.9  222.47  222.47      0
+[STAT]:402653184     100663296     float    none       0   1763.6  228.31  228.31      0   1756.4  229.25  229.25      0
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 58.8181 
+#
+

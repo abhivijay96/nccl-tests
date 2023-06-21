@@ -1,0 +1,34 @@
+# nThread 1 nGpus 7 minBytes 96 maxBytes 419430400 step: 2(factor) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  18155 on sshd-6dd579cbbc-ddzsw device  0 [0x27] NVIDIA A100-SXM4-80GB
+#  Rank  1 Group  0 Pid  18155 on sshd-6dd579cbbc-ddzsw device  1 [0x2a] NVIDIA A100-SXM4-80GB
+#  Rank  2 Group  0 Pid  18155 on sshd-6dd579cbbc-ddzsw device  2 [0x51] NVIDIA A100-SXM4-80GB
+#  Rank  3 Group  0 Pid  18155 on sshd-6dd579cbbc-ddzsw device  3 [0x57] NVIDIA A100-SXM4-80GB
+#  Rank  4 Group  0 Pid  18155 on sshd-6dd579cbbc-ddzsw device  4 [0x9e] NVIDIA A100-SXM4-80GB
+#  Rank  5 Group  0 Pid  18155 on sshd-6dd579cbbc-ddzsw device  5 [0xa4] NVIDIA A100-SXM4-80GB
+#  Rank  6 Group  0 Pid  18155 on sshd-6dd579cbbc-ddzsw device  6 [0xc7] NVIDIA A100-SXM4-80GB
+[SETTING]: gpus[0]=0
+[SETTING]: gpus[1]=1
+[SETTING]: gpus[2]=2
+[SETTING]: gpus[3]=3
+[SETTING]: gpus[4]=4
+[SETTING]: gpus[5]=5
+[SETTING]: gpus[6]=6
+[INIT]: comms[0] is at 0x565111a76440
+[INIT]: comms[1] is at 0x565111a76448
+[INIT]: comms[2] is at 0x565111a76450
+[INIT]: comms[3] is at 0x565111a76458
+[INIT]: comms[4] is at 0x565111a76460
+[INIT]: comms[5] is at 0x565111a76468
+[INIT]: comms[6] is at 0x565111a76470
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+sshd-6dd579cbbc-ddzsw: Test NCCL failure common.cu:393 'unhandled cuda error'
+ .. sshd-6dd579cbbc-ddzsw pid 18155: Test failure common.cu:596
+ .. sshd-6dd579cbbc-ddzsw pid 18155: Test failure gather.cu:106
+ .. sshd-6dd579cbbc-ddzsw pid 18155: Test failure common.cu:621
+ .. sshd-6dd579cbbc-ddzsw pid 18155: Test failure common.cu:1067
+ .. sshd-6dd579cbbc-ddzsw pid 18155: Test failure common.cu:866
