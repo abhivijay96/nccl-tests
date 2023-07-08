@@ -72,7 +72,9 @@ colors = [(0.5, 0.2, 0.8), # RGB tuple
           'C2'] # CN color spec
 
 exp_type = sys.argv[1]
-xs, ys, labels = get_x_ys(exp_type, 2, 8)
+min_gpus = int(sys.argv[2])
+max_gpus = int(sys.argv[3])
+xs, ys, labels = get_x_ys(exp_type, min_gpus, max_gpus)
 print(xs, ys, labels)
 plt.rcParams["font.size"] = 12
 # Create a figure and an axis object
